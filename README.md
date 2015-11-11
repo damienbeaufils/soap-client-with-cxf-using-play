@@ -1,6 +1,6 @@
 # soap-client-with-cxf-using-play
 
-Implementing a SOAP client with CXF using Play Framework
+Implementing a SOAP client with CXF using Play Framework 2.4
 
 ## Step by step tutorial
 
