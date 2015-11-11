@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+        http://cxf.apache.org/transports/http/configuration http://cxf.apache.org/schemas/configuration/http-conf.xsd">
+
+    <import resource="classpath*:META-INF/cxf/cxf.xml"/>
+
+    <bean class="utils.HoconPropertySourcesPlaceholderConfigurer">
+        <!-- Load configuration file defined in config.resource (see https://www.playframework.com/documentation/2.4.x/ProductionConfiguration) -->
+        <!-- If no config.resource defined, use application.conf -->
+        <property name="location" value="#{systemProperties['config.resource'] ?: 'application.conf'}"/>
+    </bean>
+
+    <jaxws:client id="globalWeatherSoapClient"
+                  serviceClass="com.global.weather.GlobalWeatherSoap"
+                  address="${global.weather.host}/globalweather.asmx"/>
+
+    <http-conf:conduit name="${global.weather.host}/.*">
+        <http-conf:client ConnectionTimeout="${global.weather.connection.timeout}"
+                          ReceiveTimeout="${global.weather.response.timeout}"
+                          AllowChunking="false"/>
+    </http-conf:conduit>
+
+</beans>
