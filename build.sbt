@@ -15,7 +15,7 @@ libraryDependencies ++= Seq(
 
   "org.apache.cxf" % "cxf-rt-frontend-jaxws" % cxfVersion,
   "org.apache.cxf" % "cxf-rt-transports-http" % cxfVersion,
-  "org.springframework" % "spring-context" % "4.2.2.RELEASE",
+  "org.springframework" % "spring-context" % "4.2.4.RELEASE",
 
   // Test dependencies
   "junit" % "junit" % "4.12" % "test",
