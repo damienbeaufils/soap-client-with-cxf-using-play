@@ -3,7 +3,6 @@
 # ~~~~
 
 # Home page
-GET        /                              @controllers.Application.index()
 GET        /cities/:country               @controllers.GlobalWeatherController.getCities(country: String)
 GET        /weather/:country/:city        @controllers.GlobalWeatherController.getWeather(country: String, city: String)
 
