@@ -24,10 +24,6 @@ libraryDependencies ++= Seq(
   "org.mockito" % "mockito-core" % "1.10.19" % "test"
 )
 
-// Play provides two styles of routers, one expects its actions to be injected, the
-// other, legacy style, accesses its actions statically.
-routesGenerator := InjectedRoutesGenerator
-
 // CXF wsdl2java configuration
 Seq(cxf.settings: _*)
 cxf.cxfVersion := cxfVersion
