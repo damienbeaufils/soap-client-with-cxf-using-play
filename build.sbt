@@ -10,10 +10,6 @@ javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 val cxfVersion: String = "3.1.4"
 
 libraryDependencies ++= Seq(
-  javaJdbc,
-  cache,
-  javaWs,
-
   "org.apache.cxf" % "cxf-rt-frontend-jaxws" % cxfVersion,
   "org.apache.cxf" % "cxf-rt-transports-http" % cxfVersion,
   "org.springframework" % "spring-context" % "4.2.4.RELEASE",
