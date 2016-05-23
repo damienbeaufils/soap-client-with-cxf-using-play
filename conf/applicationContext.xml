@@ -9,7 +9,7 @@
     <import resource="classpath*:META-INF/cxf/cxf.xml"/>
 
     <bean class="utils.HoconPropertySourcesPlaceholderConfigurer">
-        <!-- Load configuration file defined in config.resource (see https://www.playframework.com/documentation/2.4.x/ProductionConfiguration) -->
+        <!-- Load configuration file defined in config.resource (see https://www.playframework.com/documentation/2.5.x/ProductionConfiguration) -->
         <!-- If no config.resource defined, use application.conf -->
         <property name="location" value="#{systemProperties['config.resource'] ?: 'application.conf'}"/>
     </bean>
