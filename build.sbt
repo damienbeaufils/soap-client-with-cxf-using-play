@@ -7,16 +7,16 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 scalaVersion := "2.11.7"
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
-val cxfVersion: String = "3.1.4"
+val cxfVersion: String = "3.1.6"
 
 libraryDependencies ++= Seq(
   "org.apache.cxf" % "cxf-rt-frontend-jaxws" % cxfVersion,
   "org.apache.cxf" % "cxf-rt-transports-http" % cxfVersion,
-  "org.springframework" % "spring-context" % "4.2.4.RELEASE",
+  "org.springframework" % "spring-context" % "4.2.6.RELEASE",
 
   // Test dependencies
   "junit" % "junit" % "4.12" % "test",
-  "org.assertj" % "assertj-core" % "3.2.0" % "test",
+  "org.assertj" % "assertj-core" % "3.4.1" % "test",
   "org.mockito" % "mockito-core" % "1.10.19" % "test"
 )
 
