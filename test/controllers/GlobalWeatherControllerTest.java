@@ -38,7 +38,7 @@ public class GlobalWeatherControllerTest {
 
         // Then
         assertThat(result.status()).isEqualTo(200);
-        assertThat(result.contentType()).isEqualTo("text/xml");
+        assertThat(result.contentType().get()).isEqualTo("text/xml");
         assertThat(contentAsString(result)).isEqualTo(cities);
     }
 
@@ -66,7 +66,7 @@ public class GlobalWeatherControllerTest {
 
         // Then
         assertThat(result.status()).isEqualTo(200);
-        assertThat(result.contentType()).isEqualTo("text/xml");
+        assertThat(result.contentType().get()).isEqualTo("text/xml");
         assertThat(contentAsString(result)).isEqualTo(weather);
     }
 }

@@ -10,10 +10,6 @@ javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 val cxfVersion: String = "3.1.4"
 
 libraryDependencies ++= Seq(
-  javaJdbc,
-  cache,
-  javaWs,
-
   "org.apache.cxf" % "cxf-rt-frontend-jaxws" % cxfVersion,
   "org.apache.cxf" % "cxf-rt-transports-http" % cxfVersion,
   "org.springframework" % "spring-context" % "4.2.4.RELEASE",
@@ -23,10 +19,6 @@ libraryDependencies ++= Seq(
   "org.assertj" % "assertj-core" % "3.2.0" % "test",
   "org.mockito" % "mockito-core" % "1.10.19" % "test"
 )
-
-// Play provides two styles of routers, one expects its actions to be injected, the
-// other, legacy style, accesses its actions statically.
-routesGenerator := InjectedRoutesGenerator
 
 // CXF wsdl2java configuration
 Seq(cxf.settings: _*)
