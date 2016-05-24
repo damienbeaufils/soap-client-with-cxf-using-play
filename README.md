@@ -13,7 +13,7 @@ French version: https://adventuresofasoftwarecraftsman.wordpress.com/2015/11/14/
 ## How to run it
 
 ```
-activator run
+bin/activator run
 curl http://localhost:9000/cities/France
 curl http://localhost:9000/weather/France/Cognac
 ```
