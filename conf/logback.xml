@@ -15,7 +15,10 @@
   <logger name="play" level="INFO" />
   <logger name="application" level="DEBUG" />
 
-  <root level="ERROR">
+  <!-- Enable SOAP messages logging -->
+  <logger name="org.apache.cxf" level="INFO" />
+
+  <root level="WARN">
     <appender-ref ref="STDOUT" />
   </root>
 
