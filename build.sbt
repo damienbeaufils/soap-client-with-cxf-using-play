@@ -4,7 +4,7 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
 val cxfVersion: String = "3.1.7"
@@ -12,7 +12,7 @@ val cxfVersion: String = "3.1.7"
 libraryDependencies ++= Seq(
   "org.apache.cxf" % "cxf-rt-frontend-jaxws" % cxfVersion,
   "org.apache.cxf" % "cxf-rt-transports-http" % cxfVersion,
-  "org.springframework" % "spring-context" % "4.3.2.RELEASE",
+  "org.springframework" % "spring-context" % "4.3.3.RELEASE",
 
   // Test dependencies
   "junit" % "junit" % "4.12" % "test",
