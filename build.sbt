@@ -24,5 +24,6 @@ libraryDependencies ++= Seq(
 Seq(cxf.settings: _*)
 cxf.cxfVersion := cxfVersion
 cxf.wsdls := Seq(
-  cxf.Wsdl((resourceDirectory in Compile).value / "wsdls/globalweather.wsdl", Seq("-mark-generated", "-p", "com.global.weather"), "globalweather")
+  cxf.Wsdl((resourceDirectory in Compile).value / "wsdls/globalweather.wsdl",
+    Seq("-mark-generated", "-p", "com.global.weather", "-b", "jaxb-bindings.xml"), "globalweather")
 )
