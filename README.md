@@ -22,4 +22,4 @@ curl http://localhost:9000/weather/France/Cognac
 ## Live demo
 
 * List of France cities: https://cxf-soap-client-using-play.herokuapp.com/cities/France
-* Current weather in Cognac, France: https://cxf-soap-client-using-play.herokuapp.com/cities/France
+* Current weather in Cognac, France: https://cxf-soap-client-using-play.herokuapp.com/weather/France/Cognac
