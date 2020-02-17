@@ -7,9 +7,7 @@ Implementing a SOAP client with CXF using Play Framework 2.5.x
 
 ## Step by step tutorial
 
-English version: https://adventuresofasoftwarecrafter.wordpress.com/2015/12/21/implementing-a-soap-client-with-cxf-using-play-framework-2-x/
-
-French version: https://adventuresofasoftwarecrafter.wordpress.com/2015/11/14/implementer-un-client-soap-avec-cxf-sur-play-framework-2-x/
+See https://damienbeaufils.dev/blog/implementing-a-soap-client-with-cxf-using-play-framework-2-x/
 
 ## How to run it
 
